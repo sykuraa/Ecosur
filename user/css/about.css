@@ -1,0 +1,119 @@
+/* =========================================================================
+   About Page Specific CSS
+========================================================================= */
+
+/* Header styling */
+.page-header {
+  padding: 80px 0 60px;
+  background-color: var(--dark-ocean);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff; /* Adjusted for dark background */
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 50%;
+  background-color: var(--aqua);
+}
+
+.custom-list li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Statistics Card */
+.stats-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.stat-box {
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 20px 10px;
+  border: 1px solid #e1efff;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--aqua);
+}
+
+/* Gallery Section Tools */
+.carousel-inner {
+  height: 400px; /* Fixed height for consistent look */
+}
+
+.img-container {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay that appears on hover */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .img-overlay {
+  opacity: 1;
+}
+
+.img-container:hover img {
+  transform: scale(1.05); /* Slight zoom in effect */
+}
+
+.view-btn {
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.img-container:hover .view-btn {
+  transform: translateY(0);
+}
+
+.view-btn:hover {
+  background: white;
+  color: var(--dark-ocean);
+}
+
+/* Utilities */
+.cursor-pointer {
+  cursor: pointer;
+}

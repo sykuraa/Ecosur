@@ -1,0 +1,86 @@
+/* =========================================================================
+   Global CSS for SwimmerClub
+   Contains root variables, typography, and common utility classes.
+========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-blue: #007bff;
+  --aqua: #0dcaf0;
+  --dark-ocean: #0a192f;
+  --deep-ocean: #020c1b;
+  --text-light: #e6f1ff;
+  --text-muted: #8892b0;
+  
+  --font-primary: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #040914; /* Deep modern dark color similar to reference */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(13, 202, 240, 0.03), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(13, 202, 240, 0.04), transparent 30%);
+  background-attachment: fixed;
+  color: var(--text-light);
+  min-height: 100vh;
+  /* padding-top removed because the navbar is transparent over the hero image */
+}
+
+/* Navbar Customizations */
+.navbar-custom {
+  background-color: transparent !important;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar-custom.scrolled {
+  background-color: var(--dark-ocean) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--text-light) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--aqua) !important;
+  background-color: transparent !important;
+}
+
+/* Fix Bootstrap default text-muted for our dark background */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Footer Customizations */
+.footer-custom {
+  background-color: var(--deep-ocean);
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.footer-custom a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  color: var(--aqua);
+}
+
+/* Utility to add gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, var(--aqua), var(--primary-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

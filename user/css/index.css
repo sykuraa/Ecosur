@@ -1,0 +1,349 @@
+/* =========================================================================
+   Index Page CSS (Single Page Design)
+========================================================================= */
+
+/* The top wrapper holds both the Hero text and the Teaser cards over the same background */
+.top-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 2rem;
+}
+
+/* The overlay covers the entire wrapper, transitioning down to solid dark blue */
+.top-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient from dark transparent to solid dark ocean at the bottom */
+  background: linear-gradient(to bottom, rgba(2, 12, 27, 0.5) 0%, rgba(10, 25, 47, 0.8) 60%, var(--dark-ocean) 100%);
+  z-index: 1;
+}
+
+/* Hero Section (Text area) */
+.hero-section {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  /* 100% tinggi layar, card di bawahnya tidak akan 'ngintip' */
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.btn-hero {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(13, 202, 240, 0.4);
+  animation: fadeIn 1s ease-out 1s both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(13, 202, 240, 0.6);
+}
+
+/* Feature/Teaser Section */
+.teaser-section {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0 80px;
+}
+
+.teaser-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: var(--text-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.teaser-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--aqua);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Splash Screen Setup */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #040914;
+  /* True dark from our new palette */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s ease;
+  overflow: hidden;
+}
+
+/* State when removing */
+.splash-screen.hide-splash {
+  transform: translateX(100vw);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Swimmer Moving Across Screen */
+.swimmer-animation {
+  font-size: 6rem;
+  color: var(--aqua);
+  position: absolute;
+  right: -200px;
+  top: 38%;
+  animation: swimCross 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes swimCross {
+  0% {
+    right: -200px;
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-15px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  50% {
+    right: calc(50% - 3rem);
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-15px);
+  }
+
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    right: calc(100% + 200px);
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+/* SwimmerClub Splash Logo text fading in/out */
+.splash-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 4rem;
+  margin-top: 2rem;
+  font-weight: 800;
+  background: -webkit-linear-gradient(45deg, #0dcaf0, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInOut 2.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+/* Custom Scrollbar for Comment Feed */
+.comment-feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comment-feed::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.comment-feed::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.comment-feed::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Glassmorphism Classes for Comments */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-input:focus {
+  background: transparent !important;
+  color: white !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 1px 0 0 var(--primary-blue) !important;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 202, 240, 0.5) !important;
+}
+
+/* Accordion Background Image Support */
+.custom-accordion .accordion-button {
+  background-blend-mode: overlay;
+  transition: transform 0.3s ease;
+}
+
+.custom-accordion .accordion-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Accordion Customization for Dark Theme */
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: rgba(13, 202, 240, 0.1) !important;
+  color: var(--aqua) !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  border-radius: .5rem .5rem 0 0;
+}
+
+.custom-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+  border-color: rgba(13, 202, 240, 0.5);
+}
+
+/* Make chevron arrow white/cyan instead of black on dark background */
+.custom-accordion .accordion-button::after {
+  filter: invert(1);
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(150deg);
+  /* Approximate Aqua filter */
+}
+
+
+/* Ensure all gallery images are perfectly uniform */
+#prestasiCarousel img {
+  height: 450px;
+  object-fit: cover;
+}

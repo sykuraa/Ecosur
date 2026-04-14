@@ -1,0 +1,216 @@
+/* Admin CSS - SwimmerClub Dark Premium Theme */
+
+:root {
+  --dark-navy: #040914;
+  --dark-panel: rgba(10, 20, 35, 0.7);
+  --aqua: #0dcaf0;
+  --neon-blue: #00f2fe;
+}
+
+body {
+    background-color: var(--dark-navy) !important;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif;
+}
+
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, var(--aqua), var(--neon-blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sidebar Wrapper */
+#sidebar-wrapper {
+    background: rgba(0, 5, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255,255,255,0.05) !important;
+    min-height: 100vh;
+    width: 250px;
+    transition: margin 0.25s ease-out;
+}
+
+.list-group-item.bg-dark {
+    background-color: transparent !important;
+}
+
+.list-group-item.active {
+    background-color: rgba(13, 202, 240, 0.1) !important;
+    border-left: 5px solid var(--bs-info) !important;
+    color: #fff !important;
+}
+
+.list-group-item {
+    transition: all 0.2s ease;
+    border-left: 5px solid transparent !important;
+}
+
+.list-group-item:hover:not(.text-danger) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.list-group-item.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+    border-left: 5px solid var(--bs-danger) !important;
+}
+
+/* Top Navbar */
+nav.navbar {
+    background: rgba(4, 9, 20, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+#topNavTitle {
+    color: #fff !important;
+}
+
+#menu-toggle {
+    color: #fff;
+    border-color: rgba(255,255,255,0.2) !important;
+}
+
+/* Base Page Wrapper */
+#page-content-wrapper {
+    background: transparent !important;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -250px;
+}
+
+@media (min-width: 768px) {
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #menu-toggle {
+        display: none;
+    }
+}
+
+/* Fade in Animation */
+.fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards & Glassmorphism */
+.glass-card, .card {
+    background: var(--dark-panel) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.card-footer.bg-white {
+    background-color: rgba(0,0,0,0.3) !important;
+    border-top: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.panel-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.panel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(13, 202, 240, 0.15) !important;
+}
+
+/* Utilities text override for dark mode */
+.text-dark { color: #f0f0f0 !important; }
+.text-muted, .text-secondary { color: #adb5bd !important; }
+
+/* Table Enhancements */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #fff !important;
+}
+
+.custom-table th {
+    background-color: rgba(255,255,255,0.03) !important;
+    color: var(--aqua) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.custom-table td {
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    color: #e0e0e0;
+}
+
+.custom-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+.custom-table tbody tr:hover td {
+    background-color: rgba(13, 202, 240, 0.05) !important;
+}
+
+.rounded-top-left { border-top-left-radius: 12px; }
+.rounded-top-right { border-top-right-radius: 12px; }
+
+.bg-light { 
+    background-color: rgba(255,255,255,0.05) !important; 
+}
+.badge.bg-light {
+    background-color: rgba(255,255,255,0.1) !important;
+    color: #fff !important;
+}
+
+/* Custom Pagination UI */
+.custom-pagination .page-link {
+    color: #adb5bd;
+    border-radius: 8px;
+    margin: 0 3px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.custom-pagination .page-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    border-color: transparent;
+}
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--aqua);
+    border-color: var(--aqua);
+    color: #000;
+    box-shadow: 0 4px 10px rgba(13, 202, 240, 0.4);
+}
+.custom-pagination .page-item.disabled .page-link {
+    color: rgba(255,255,255,0.2);
+}
+
+/* Modals */
+.modal-content {
+    background-color: var(--dark-navy) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+.modal-body {
+    background-color: rgba(10, 20, 35, 1) !important;
+}
+.modal-body .bg-light {
+    background-color: rgba(0,0,0,0.5) !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+.modal-header.bg-primary {
+    background: linear-gradient(135deg, #0dcaf0, #0b5ed7) !important;
+}
+.modal-header.bg-warning {
+    background: linear-gradient(135deg, #ffc107, #fd7e14) !important;
+}

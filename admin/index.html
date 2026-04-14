@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - SwimmerClub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="bg-dark">
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-dark text-white shadow" id="sidebar-wrapper">
+      <div class="sidebar-heading py-4 fw-bold fs-4 border-bottom border-secondary text-center font-outfit">
+        <i class="fas fa-user-shield me-2 text-info"></i>AdminSC
+      </div>
+      <div class="list-group list-group-flush mt-3 font-outfit" id="sidebarNav">
+        <a href="#" data-target="dashboard"
+          class="list-group-item list-group-item-action bg-dark text-white active border-0 py-3 nav-link-spa">
+          <i class="fas fa-tachometer-alt me-3 text-info"></i>Dashboard
+        </a>
+        <a href="#" data-target="anggota"
+          class="list-group-item list-group-item-action bg-dark text-light border-0 py-3 nav-link-spa">
+          <i class="fas fa-users me-3"></i>Member Data
+        </a>
+        <a href="#" data-target="komentar"
+          class="list-group-item list-group-item-action bg-dark text-light border-0 py-3 nav-link-spa">
+          <i class="fas fa-comment-dots me-3"></i>Comments
+        </a>
+        <a href="../user/index.html"
+          class="list-group-item list-group-item-action bg-dark text-danger border-0 py-3 mt-4">
+          <i class="fas fa-sign-out-alt me-3"></i>Logout
+        </a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="w-100 overflow-auto" style="height: 100vh;">
+
+      <!-- Top Navbar for Mobile Toggle -->
+      <nav class="navbar navbar-expand-lg border-bottom px-4 py-3">
+        <button class="btn btn-outline-light me-3 d-md-none" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        <span class="fw-bold fs-5 font-outfit text-white" id="topNavTitle">Dashboard Overview</span>
+      </nav>
+
+      <div class="container-fluid p-4 p-md-5">
+
+        <!-- SECTION 1: DASHBOARD -->
+        <div id="section-dashboard" class="view-section fade-in">
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <a href="#" data-target="anggota" class="list-group-item list-group-item-action nav-link-spa">
+                <div
+                  class="card bg-primary text-white p-4 p-lg-5 border-0 shadow rounded-4 h-100 overflow-hidden position-relative panel-card">
+                  <i class="fas fa-users position-absolute text-white"
+                    style="font-size: 10rem; opacity: 0.15; right: -30px; bottom: -30px;"></i>
+                  <div class="position-relative z-1">
+                    <h5 class="fw-semibold mb-3 font-outfit text-white-50">Total Applicants</h5>
+                    <h1 class="fw-bold display-3 mb-0 font-outfit" id="dashTotalAnggota"><i
+                        class="fas fa-spinner fa-spin text-white-50" style="font-size: 2.5rem;"></i></h1>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" data-target="komentar" class="list-group-item list-group-item-action nav-link-spa">
+                <div
+                  class="card bg-warning text-dark p-4 p-lg-5 border-0 shadow rounded-4 h-100 overflow-hidden position-relative panel-card">
+                  <i class="fas fa-comments position-absolute text-dark"
+                    style="font-size: 10rem; opacity: 0.1; right: -30px; bottom: -30px;"></i>
+                  <div class="position-relative z-1">
+                    <h5 class="fw-semibold mb-3 font-outfit text-white-50">Total Comments</h5>
+                    <h1 class="fw-bold display-3 mb-0 font-outfit" id="dashTotalKomentar"><i
+                        class="fas fa-spinner fa-spin text-white-50" style="font-size: 2.5rem;"></i></h1>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card border-0 rounded-4 p-5 mt-4 position-relative overflow-hidden shadow-lg glass-card text-white">
+            <img
+              src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+              style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity: 0.15; z-index:0;"
+              alt="Laptop on the beach">
+            <div class="position-relative z-1 text-center py-4">
+              <div
+                class="d-inline-flex align-items-center justify-content-center bg-info bg-opacity-10 border border-info border-opacity-50 rounded-circle mb-4 shadow"
+                style="width: 80px; height: 80px;">
+                <i class="fas fa-swimmer text-info fs-1"></i>
+              </div>
+              <h2 class="fw-bold font-outfit mb-3 text-gradient">Welcome to the Deck, Admin!</h2>
+              <p class="text-white-50 lead mx-auto" style="max-width: 600px; font-size: 1.05rem;">The SwimmerClub Engine
+                is running smoothly. Monitor new members globally and moderate the community pulses in real-time right
+                here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DATA ANGGOTA -->
+        <div id="section-anggota" class="view-section fade-in d-none">
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-dark bg-transparent table-hover align-middle mb-0 custom-table">
+                  <thead class="text-muted small text-uppercase font-outfit"
+                    style="background: rgba(255,255,255,0.03);">
+                    <tr>
+                      <th class="ps-4 rounded-top-left py-4">Timestamp</th>
+                      <th class="py-4">Identity</th>
+                      <th class="py-4">Contact</th>
+                      <th class="py-4">Interest</th>
+                      <th class="text-center rounded-top-right py-4 pe-4">Experience</th>
+                    </tr>
+                  </thead>
+                  <tbody id="anggotaTableBody">
+                    <!-- Javascript Data -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Pagination Anggota -->
+            <div
+              class="card-footer bg-white border-top py-4 border-light d-flex flex-column flex-md-row justify-content-between align-items-center px-4 rounded-bottom-4">
+              <span class="text-muted small fw-semibold font-outfit mb-3 mb-md-0" id="anggotaTableInfo">Showing 1 to
+                5</span>
+              <nav>
+                <ul class="pagination pagination-sm mb-0 custom-pagination" id="anggotaPagination">
+                  <!-- JS Gen -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: DATA KOMENTAR -->
+        <div id="section-komentar" class="view-section fade-in d-none">
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-dark bg-transparent table-hover align-middle mb-0 custom-table">
+                  <thead class="text-muted small text-uppercase font-outfit"
+                    style="background: rgba(255,255,255,0.03);">
+                    <tr>
+                      <th class="ps-4 py-4 rounded-top-left">Timestamp</th>
+                      <th class="py-4 w-25">Sender Name</th>
+                      <th class="py-4">Contact</th>
+                      <th class="py-4 w-25">Message Preview</th>
+                      <th class="text-center py-4 rounded-top-right pe-4">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="komentarTableBody">
+                    <!-- Javascript Data -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Pagination Komentar -->
+            <div
+              class="card-footer bg-white border-top py-4 border-light d-flex flex-column flex-md-row justify-content-between align-items-center px-4 rounded-bottom-4">
+              <span class="text-muted small fw-semibold font-outfit mb-3 mb-md-0" id="komentarTableInfo">Showing 1 to
+                5</span>
+              <nav>
+                <ul class="pagination pagination-sm mb-0 custom-pagination" id="komentarPagination">
+                  <!-- JS Gen -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Reusable Read/Action Modal -->
+  <div class="modal fade" id="actionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header text-white border-0 py-4 px-4" id="actionModalHeader">
+          <h5 class="modal-title fw-bold font-outfit" id="actionModalTitle"><i class="fas fa-file-alt me-2"></i>Full
+            Details</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5 bg-white">
+          <h5 class="fw-bold text-dark mb-2 font-outfit" id="modalName">Name</h5>
+          <p class="text-muted small fw-semibold mb-4 border-bottom pb-4" id="modalSubInfo">Info: -</p>
+          <div class="px-3 py-4 bg-light border-start border-4 border-primary rounded-end shadow-sm">
+            <p class="mb-0 text-secondary" id="modalLongText" style="line-height: 1.8; font-size: 0.95rem;">...</p>
+          </div>
+          <div class="mt-5 text-end">
+            <button type="button" class="btn btn-outline-dark px-4 rounded-pill font-outfit fw-semibold"
+              data-bs-dismiss="modal">Close Overlay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirm Modal -->
+  <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content border-0 shadow-lg rounded-4" style="background-color: var(--dark-navy);">
+        <div class="modal-body p-4 text-center">
+          <i class="fas fa-exclamation-triangle text-danger mb-3" style="font-size: 3.5rem;"></i>
+          <h5 class="text-white font-outfit fw-bold mb-2">Delete Comment?</h5>
+          <p class="text-white-50 small mb-4">This will permanently remove the record from your Google Spreadsheet
+            database. Cannot be undone.</p>
+          <button type="button" class="btn btn-outline-light rounded-pill px-4 me-2 font-outfit"
+            data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger rounded-pill px-4 shadow-sm font-outfit"
+            id="confirmDeleteBtn">Yes, Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

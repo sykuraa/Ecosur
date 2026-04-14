@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwimmerClub - President University</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-screen">
+    <div class="swimmer-animation">
+      <i class="fas fa-swimmer"></i>
+    </div>
+    <div class="splash-logo position-absolute">SwimmerClub</div>
+  </div>
+
+
+  <!-- Shared Navbar Injection -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- TOP WRAPPER: Contains Hero and Teaser Cards to share the background image -->
+  <div class="top-section-wrapper">
+    <div class="top-overlay"></div>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <h1 class="hero-title text-gradient">SWIM LIKE AN ATHLETE.</h1>
+        <p class="hero-subtitle">The Official Swimming Community of President University.<br>Build your achievements in
+          and out of the pool with us.</p>
+        <button class="btn btn-info btn-hero text-white" data-bs-toggle="modal" data-bs-target="#joinModal">
+          Join Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Teasers / Mini Features (Transparent with blurry cards) -->
+    <section id="features" class="teaser-section text-center">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card teaser-card h-100 p-4">
+              <div class="icon-wrapper"><i class="fas fa-medal"></i></div>
+              <h4 class="fw-bold">Achievements</h4>
+              <p class="text-muted">Producing champions at national and international levels.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card teaser-card h-100 p-4">
+              <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+              <h4 class="fw-bold">Strong Community</h4>
+              <p class="text-muted">More than just a club, we are a family of students who love the water.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card teaser-card h-100 p-4">
+              <div class="icon-wrapper"><i class="fas fa-water"></i></div>
+              <h4 class="fw-bold">Integrated Programs</h4>
+              <p class="text-muted">Accurate training syllabus for beginners to athletes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">About <span class="text-gradient">SwimmerClub</span></h1>
+        <p class="lead text-muted">More than just swimming, we are a family.</p>
+      </div>
+
+      <div class="row g-5 align-items-center">
+        <!-- Text Column -->
+        <div class="col-lg-6">
+          <h2 class="section-title text-white">Our History</h2>
+          <p class="text-muted mb-4">
+            Established a few years ago, SwimmerClub President University started as a small gathering of students.
+            Today, we have grown into an elite division nurturing hundreds of athletes and swimming enthusiasts on
+            campus.
+          </p>
+
+          <h2 class="section-title text-white">Vision & Mission</h2>
+          <ul class="list-unstyled custom-list text-muted">
+            <li><i class="fas fa-check-circle text-info me-2"></i><strong>Vision:</strong> To be the best platform in
+              cultivating physically fit students and achieving medals on the national stage.</li>
+            <li><i class="fas fa-check-circle text-info me-2"></i><strong>Mission 1:</strong> To conduct structured
+              weekly training sessions.</li>
+            <li><i class="fas fa-check-circle text-info me-2"></i><strong>Mission 2:</strong> To actively participate in
+              inter-university championships.</li>
+            <li><i class="fas fa-check-circle text-info me-2"></i><strong>Mission 3:</strong> To build a sense of
+              kinship.</li>
+          </ul>
+        </div>
+        <!-- Image/Stats Column -->
+        <div class="col-lg-6">
+          <div class="stats-card p-4 text-center bg-dark">
+            <h3 class="mb-4 fw-bold text-white">SwimmerClub in Numbers</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-box" style="background:#020c1b; border: 1px solid #0a192f;">
+                  <h2 class="text-info fw-bold">150+</h2>
+                  <p class="text-muted mb-0">Total Members</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box" style="background:#020c1b; border: 1px solid #0a192f;">
+                  <h2 class="text-info fw-bold">50+</h2>
+                  <p class="text-muted mb-0">Achievements</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box" style="background:#020c1b; border: 1px solid #0a192f;">
+                  <h2 class="text-info fw-bold">20+</h2>
+                  <p class="text-muted mb-0">Annual Events</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box" style="background:#020c1b; border: 1px solid #0a192f;">
+                  <h2 class="text-info fw-bold">10+</h2>
+                  <p class="text-muted mb-0">Expert Coaches</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Achievement <span class="text-gradient">Gallery</span></h2>
+        <p class="text-muted">Golden moments we've carved out together.</p>
+      </div>
+
+      <!-- Carousel -->
+      <div id="prestasiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 shadow-sm">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-0">
+              <div class="col-md-6 col-12 img-container cursor-pointer" onclick="openGalleryModal(1)">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="d-block w-100" alt="Lomba Nasional">
+                <div class="img-overlay">
+                  <span class="view-btn"><i class="fas fa-search-plus"></i> View Details</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 d-none d-md-block img-container cursor-pointer" onclick="openGalleryModal(2)">
+                <img
+                  src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="d-block w-100" alt="Latihan Rutin">
+                <div class="img-overlay">
+                  <span class="view-btn"><i class="fas fa-search-plus"></i> View Details</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-0">
+              <div class="col-md-6 col-12 img-container cursor-pointer" onclick="openGalleryModal(3)">
+                <img
+                  src="https://images.unsplash.com/photo-1560090995-01632a28895b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="d-block w-100" alt="Kejuaraan Antar Universitas">
+                <div class="img-overlay">
+                  <span class="view-btn"><i class="fas fa-search-plus"></i> View Details</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 d-none d-md-block img-container cursor-pointer" onclick="openGalleryModal(4)">
+                <img
+                  src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="d-block w-100" alt="Medali Emas">
+                <div class="img-overlay">
+                  <span class="view-btn"><i class="fas fa-search-plus"></i> View Details</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#prestasiCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#prestasiCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-5">
+    <div class="container mb-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-4">Programs <span class="text-gradient">& Schedules</span></h2>
+        <p class="text-muted">Specially designed agendas for all SwimmerClub members.</p>
+      </div>
+
+      <div class="accordion custom-accordion" id="accordionPrograms">
+
+        <!-- Top Card: Full Width Special Program -->
+        <div class="accordion-item bg-transparent border-0 mb-4">
+          <h2 class="accordion-header" id="headingSpecial">
+            <button class="accordion-button rounded-4 shadow-lg px-4 py-5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSpecial" aria-expanded="true" aria-controls="collapseSpecial"
+              style="background: linear-gradient(rgba(2,12,27,0.8), rgba(10,25,47,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; border: 1px solid rgba(255,255,255,0.1);">
+              <i class="fas fa-umbrella-beach text-info me-3 fs-1"></i>
+              <span class="fs-3 fw-bold text-white">Special Program: Open Water Training</span>
+            </button>
+          </h2>
+          <!-- Removed data-bs-parent so it opens independently -->
+          <div id="collapseSpecial" class="accordion-collapse collapse show" aria-labelledby="headingSpecial">
+            <div class="accordion-body mt-3 rounded-4 p-4 text-light"
+              style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+              <p class="mb-3">This special training, held every 6 months, takes members out of their comfort
+                zone—straight to open waters like the sea or beach. Unlike pool training, Open Water Training introduces
+                new challenges in adapting to currents, visibility, and rhythm control.</p>
+              <p class="mb-0">Beyond improving technical skills, this program is highly anticipated as it offers a
+                freer, more exciting, and memorable experience. It's not just about training; it strengthens camaraderie
+                among members in a relaxed and fun environment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Two Cards -->
+        <div class="row g-4">
+
+          <!-- Left Bottom: Training Schedule -->
+          <div class="col-md-6">
+            <div class="accordion-item bg-transparent border-0 h-100">
+              <h2 class="accordion-header" id="headingWeekly">
+                <button class="accordion-button rounded-4 shadow-lg px-4 py-4" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseWeekly" aria-expanded="true" aria-controls="collapseWeekly"
+                  style="background: linear-gradient(rgba(2,12,27,0.8), rgba(10,25,47,0.8)), url('https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; border: 1px solid rgba(255,255,255,0.1);">
+                  <i class="fas fa-calendar-check text-info me-3 fs-2"></i>
+                  <span class="fs-4 fw-bold text-white">Regular Training Schedule</span>
+                </button>
+              </h2>
+              <!-- Removed data-bs-parent -->
+              <div id="collapseWeekly" class="accordion-collapse collapse show" aria-labelledby="headingWeekly">
+                <div class="accordion-body mt-3 rounded-4 p-4 text-light"
+                  style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+                  <p class="mb-4">Regular training is held 3 times a week to maintain consistency and improve every
+                    member's skills. Each session covers warm-ups, technical drills, main sets, and cool-downs, focusing
+                    on technique, endurance, and speed.</p>
+                  <p class="fw-bold text-info mb-3">Training Schedule</p>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="far fa-clock text-info me-2"></i> Wednesday Afternoon — 16.00 – End</li>
+                    <li class="mb-2"><i class="far fa-clock text-info me-2"></i> Saturday Afternoon — 15.30 – End</li>
+                    <li><i class="far fa-clock text-warning me-2"></i> Sunday Morning — 07.00 – End</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Bottom: Internal Competition -->
+          <div class="col-md-6">
+            <div class="accordion-item bg-transparent border-0 h-100">
+              <h2 class="accordion-header" id="headingMonthly">
+                <button class="accordion-button rounded-4 shadow-lg px-4 py-4" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseMonthly" aria-expanded="true" aria-controls="collapseMonthly"
+                  style="background: linear-gradient(rgba(2,12,27,0.8), rgba(10,25,47,0.8)), url('https://images.unsplash.com/photo-1560090995-01632a28895b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; border: 1px solid rgba(255,255,255,0.1);">
+                  <i class="fas fa-trophy text-warning me-3 fs-2"></i>
+                  <span class="fs-4 fw-bold text-white">Internal Competition</span>
+                </button>
+              </h2>
+              <!-- Removed data-bs-parent -->
+              <div id="collapseMonthly" class="accordion-collapse collapse show" aria-labelledby="headingMonthly">
+                <div class="accordion-body mt-3 rounded-4 p-4 text-light"
+                  style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+                  <p class="lead fw-bold text-warning mb-2">Monthly Program</p>
+                  <p class="mb-0">Internal competitions are held monthly to evaluate and boost the competitive spirit
+                    among members. Races feature simple formats like 50m or 100m sprints, maintaining a relaxed yet
+                    challenging atmosphere. Aside from measuring progress, this program builds sportsmanship and unity.
+                    Winners receive exciting surprise rewards from the coaches or management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments / Community Pulse Section -->
+  <section id="comments" class="py-5 position-relative">
+    <div class="container mb-5 z-2 position-relative">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Community <span class="text-gradient">Pulse</span></h2>
+        <p class="text-muted">Impressions and messages from SwimmerClub members.</p>
+      </div>
+
+      <div class="row g-5 align-items-start">
+
+        <!-- Left Side: Community Feed -->
+        <div class="col-lg-7">
+          <h3 class="fw-bold text-white mb-4">What People Say</h3>
+
+          <div id="commentFeed" class="comment-feed pe-2" style="max-height: 500px; overflow-y: auto;">
+            <!-- Loading Indicator -->
+            <div class="text-center text-muted py-5 text-white-50">
+              <div class="spinner-border text-info mb-3" role="status"></div>
+              <p class="small">Fetching latest comments live from database...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Form (Community Pulse) -->
+        <div class="col-lg-5">
+          <div class="glass-card rounded-4 p-4 p-md-5 position-relative overflow-hidden">
+            <!-- Glowing decorative orb -->
+            <div class="position-absolute rounded-circle"
+              style="width: 150px; height: 150px; background: var(--aqua); filter: blur(80px); top: -50px; right: -50px; opacity: 0.2; pointer-events: none;">
+            </div>
+
+            <div class="position-relative z-1">
+              <h3 class="fw-bold text-white mb-4">Send Your Shoutout</h3>
+              <form id="shoutoutForm">
+                <input type="hidden" name="formType" value="comment">
+                <div class="mb-4">
+                  <input type="text" name="senderName"
+                    class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white"
+                    placeholder="Full Name" required
+                    style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+                </div>
+                <div class="mb-4">
+                  <input type="text" name="contact"
+                    class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white"
+                    placeholder="Contact / IG (Optional)"
+                    style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+                </div>
+                <div class="mb-5">
+                  <textarea name="message"
+                    class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" rows="2"
+                    placeholder="Write something for SwimmerClub..." required
+                    style="background: transparent; border-color: rgba(255,255,255,0.2) !important;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info w-100 fw-bold rounded-pill text-white shadow-lg btn-glow"
+                  style="padding: 14px 0; font-size: 1.1rem; transition: all 0.3s ease;">Send Shoutout <i
+                    class="fas fa-paper-plane ms-2"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer Injection -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Modal for Join Us -->
+  <div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 glass-card"
+        style="background-color: rgba(4, 9, 20, 0.95); backdrop-filter: blur(20px);">
+        <div class="modal-header border-bottom border-secondary p-4">
+          <h4 class="modal-title fw-bold text-white mb-0" id="joinModalLabel">Join <span
+              class="text-info">SwimmerClub</span></h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5 position-relative overflow-hidden">
+          <!-- Decorative Glow -->
+          <div class="position-absolute rounded-circle"
+            style="width: 200px; height: 200px; background: var(--aqua); filter: blur(100px); top: -100px; left: -100px; opacity: 0.2; pointer-events: none;">
+          </div>
+
+          <form id="joinForm" class="position-relative z-1">
+            <div class="row g-4">
+              <!-- Full Name -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">Full Name</label>
+                <input type="text" name="fullName"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" required
+                  minlength="5" placeholder="John Doe"
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+              </div>
+
+              <!-- Student ID -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">Student ID</label>
+                <input type="text" name="studentId"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" required
+                  pattern="[0-9]{7,}" title="Must be at least 7 digits (numbers only)" placeholder="0123456"
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+              </div>
+
+              <!-- Major (Datalist) -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">Major</label>
+                <input class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white"
+                  list="majorOptions" name="major" required placeholder="Type to search your major..."
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+                <datalist id="majorOptions">
+                  <option value="Accounting">
+                  <option value="Actuarial Science">
+                  <option value="Agribusiness">
+                  <option value="Architecture">
+                  <option value="Business Administration">
+                  <option value="Civil Engineering">
+                  <option value="Communication Science">
+                  <option value="Computer Science / Information Technology">
+                  <option value="Electrical Engineering">
+                  <option value="Environmental Engineering">
+                  <option value="Industrial Engineering">
+                  <option value="Information Systems">
+                  <option value="Interior Design">
+                  <option value="International Relations">
+                  <option value="Law">
+                  <option value="Management">
+                  <option value="Mechanical Engineering">
+                  <option value="Medicine">
+                  <option value="Primary School Teacher Education">
+                  <option value="Visual Communication Design">
+                </datalist>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">WhatsApp Number</label>
+                <input type="tel" name="whatsapp"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" required
+                  pattern="[0-9]+" title="Only numbers are allowed" placeholder="08123456789"
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">Email Address</label>
+                <input type="email" name="email"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" required
+                  placeholder="student@example.com"
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+              </div>
+
+              <!-- Batch -->
+              <div class="col-md-6">
+                <label class="form-label text-white-50 small fw-semibold">Batch (Year)</label>
+                <input type="text" name="batch"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" required
+                  pattern="[0-9]{4}" title="Must be a 4-digit year" placeholder="2024"
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;">
+              </div>
+
+              <!-- Level of Interest -->
+              <div class="col-md-12">
+                <label class="form-label text-white-50 small fw-semibold mb-3">Level of Interest</label>
+                <select name="interest" class="form-select border-0 border-bottom rounded-0 text-white"
+                  style="background-color: transparent; border-color: rgba(255,255,255,0.2) !important; cursor: pointer;"
+                  required>
+                  <option value="" disabled selected class="text-dark">Select your focus...</option>
+                  <option value="Hobby" class="text-dark">Hobby & Fitness</option>
+                  <option value="Competition" class="text-dark">Competition / Athlete</option>
+                  <option value="Community" class="text-dark">Community & Networking</option>
+                </select>
+              </div>
+
+              <!-- Experience -->
+              <div class="col-12 mt-4">
+                <label class="form-label text-white-50 small fw-semibold">Write your experience or excites
+                  (Optional)</label>
+                <textarea name="experience"
+                  class="form-control glass-input px-0 py-2 border-0 border-bottom rounded-0 text-white" rows="2"
+                  placeholder="Tell us a bit about your swimming background..."
+                  style="background: transparent; border-color: rgba(255,255,255,0.2) !important;"></textarea>
+              </div>
+            </div>
+
+            <div class="mt-5 text-end">
+              <button type="submit"
+                class="btn btn-info w-100 w-md-auto px-5 py-3 fw-bold rounded-pill text-white shadow-lg btn-glow"
+                style="transition: all 0.3s ease;">
+                Submit Registration <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Alert Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 glass-card"
+        style="background-color: rgba(4, 9, 20, 0.95); backdrop-filter: blur(20px);">
+        <div class="modal-body p-5 text-center position-relative overflow-hidden">
+          <!-- Green Glowing Orb -->
+          <div class="position-absolute rounded-circle"
+            style="width: 150px; height: 150px; background: #198754; filter: blur(80px); top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.2; pointer-events: none;">
+          </div>
+
+          <div class="position-relative z-1">
+            <div
+              class="d-inline-flex align-items-center justify-content-center rounded-circle bg-success text-white mb-4 shadow-lg"
+              style="width: 80px; height: 80px; font-size: 2.5rem; border: 2px solid rgba(255,255,255,0.2);">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3 class="fw-bold text-white mb-3">Registration Successful!</h3>
+            <p class="text-white-50 mb-5">Your data has been securely saved. See you at the pool!</p>
+            <button type="button" id="successCloseBtn"
+              class="btn btn-outline-light px-5 py-2 rounded-pill fw-bold transition-all"
+              data-bs-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Gallery -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content border-0 bg-transparent">
+        <div class="modal-header bg-dark text-white border-bottom border-secondary">
+          <h5 class="modal-title" id="galleryModalLabel">Achievement Details</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0" style="background: var(--dark-ocean); color: white;">
+          <div class="row g-0 align-items-stretch">
+            <!-- Left Side: Information -->
+            <div class="col-md-5 p-4 p-lg-5 d-flex flex-column justify-content-center">
+              <h3 id="modalTitle" class="fw-bold text-gradient mb-4">Achievement Title</h3>
+
+              <div class="mb-4">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                    style="width: 45px; height: 45px; min-width: 45px; font-size: 1.2rem; background-color: rgba(255,255,255,0.05); color: var(--aqua);">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-white-50 small">Date</h6>
+                    <span id="modalDate" class="fw-semibold">12 Agustus 2025</span>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                    style="width: 45px; height: 45px; min-width: 45px; font-size: 1.2rem; background-color: rgba(255,255,255,0.05); color: var(--aqua);">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-white-50 small">Event Venue</h6>
+                    <span id="modalLocation" class="fw-semibold">Gelora Bung Karno</span>
+                  </div>
+                </div>
+              </div>
+
+              <h5 class="text-white border-bottom border-secondary pb-2 mb-3">Event Description</h5>
+              <p id="modalDesc" class="text-muted" style="line-height: 1.8;">Detailed description of the event attended,
+                the course of the match, and the satisfying results.</p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-md-7 p-0">
+              <img src="" id="modalImage" class="img-fluid w-100"
+                style="height: 100%; max-height: 450px; object-fit: cover;" alt="Detail Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Admin Auth -->
+  <div class="modal fade" id="adminLoginModal" tabindex="-1" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content border-0 glass-card"
+        style="background-color: rgba(4, 9, 20, 0.95); backdrop-filter: blur(20px);">
+        <div class="modal-body p-4 text-center position-relative overflow-hidden">
+          <div class="position-absolute rounded-circle"
+            style="width: 150px; height: 150px; background: var(--aqua); filter: blur(80px); top: -50px; left: -50px; opacity: 0.15; pointer-events: none;">
+          </div>
+          <i class="fas fa-user-shield text-info mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="text-white fw-bold mb-3 font-outfit" id="adminLoginModalLabel">Admin Verification</h5>
+          <input type="password" id="adminPasswordInput"
+            class="form-control glass-input bg-transparent text-center text-white mb-3"
+            placeholder="Enter Master Password" style="border-color: rgba(255,255,255,0.2);">
+          <div id="adminAuthError" class="text-danger small fw-bold mb-3 d-none">Incorrect Password. Access Denied.
+          </div>
+          <button type="button" class="btn btn-info w-100 rounded-pill fw-bold" onclick="verifyAdminAuth()">Authorize
+            Entry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
+  <script>
+    async function verifyAdminAuth() {
+      const input = document.getElementById('adminPasswordInput').value;
+      const err = document.getElementById('adminAuthError');
+
+      // Convert to SHA-256 Hash
+      const encoder = new TextEncoder();
+      const data = encoder.encode(input);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      // Expected master password hash
+      const expectedHash = 'e0c531828d6c8929063f32ad3af83857711871712ff3737d6c2b3f50990d51c2';
+
+      if (hashHex === expectedHash) {
+        err.classList.add('d-none');
+        // Animate transition
+        document.getElementById('adminLoginModalLabel').innerText = "Access Granted...";
+        setTimeout(() => {
+          window.location.href = '../admin/index.html';
+        }, 600);
+      } else {
+        err.classList.remove('d-none');
+      }
+    }
+  </script>
+
+  <script>
+    // Data dummy untuk mock up modal
+    const galleryData = {
+      1: {
+        img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        title: 'POMNAS Overall Champion 2025',
+        date: 'August 12 - 15, 2025',
+        location: 'Gelora Bung Karno Aquatic Center, Jakarta',
+        desc: 'Annual national university competition. SwimmerClub PU team successfully swept 3 gold medals in long-distance freestyle and backstroke categories.'
+      },
+      2: {
+        img: 'https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        title: 'Joint Routine Training',
+        date: 'Every Weekend',
+        location: 'President University Pool Deck',
+        desc: 'Weekly intensive training sessions in the main campus pool. Training covers stamina building and form perfection.'
+      },
+      3: {
+        img: 'https://images.unsplash.com/photo-1560090995-01632a28895b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        title: 'Rektor Cup 2024',
+        date: '20 November 2024',
+        location: 'Jababeka Sports Center',
+        desc: 'Internal university swimming competition to win the Rector rotating trophy. Attended by more than 300 students as supporters.'
+      },
+      4: {
+        img: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        title: 'Athlete Quarantine for PON',
+        date: 'January - March 2026',
+        location: 'National Training Center, Bandung',
+        desc: 'Special boarding program for selected student athletes to undergo intensive training ahead of the National Sports Week.'
+      }
+    };
+
+    function openGalleryModal(id) {
+      const data = galleryData[id];
+      if (data) {
+        document.getElementById('modalImage').src = data.img;
+        document.getElementById('modalTitle').innerText = data.title;
+        document.getElementById('modalDate').innerText = data.date;
+        document.getElementById('modalLocation').innerText = data.location;
+        document.getElementById('modalDesc').innerText = data.desc;
+        const myModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+        myModal.show();
+      }
+    }
+  </script>
+</body>
+
+</html>
